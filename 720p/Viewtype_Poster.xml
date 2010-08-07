@@ -1,0 +1,202 @@
+<includes>
+  
+	<include name="poster">
+    <description>Poster View</description>
+
+	<!-- List (Invisible) -->
+	
+		<control type="list" id="52">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>1</height>
+			<orientation>horizontal</orientation>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>9000</onup>
+			<ondown></ondown>
+			<viewtype label="poster">poster</viewtype>
+			<scrolltime>200</scrolltime>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+      <itemlayout width="1">
+      </itemlayout>
+      <focusedlayout width="1">
+      </focusedlayout>
+		</control>
+
+	<!-- Middle Bar --> 
+
+	<control type="group">
+	
+	<posy>500</posy>
+
+	<control type="group">
+		<visible>Control.IsVisible(52)</visible>
+
+	<control type="image">
+		<posy>-15</posy>
+		<width>1280</width>
+		<height>100</height>
+		<texture>middle.png</texture>
+		</control>
+	
+	<control type="label">
+		<posx>540</posx>
+		<width>450</width>
+		<height>36</height>
+		<info>ListItem.Label</info>
+		<align>right</align>
+		<font>Medium</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>		
+		</control>
+
+	<control type="label">
+		<posx>540</posx>
+		<posy>30</posy>
+		<width>450</width>
+		<height>14</height>
+		<info>ListItem.Genre</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>						<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Genre)</visible>		
+		</control>
+
+	<control type="label">
+		<posx>540</posx>
+		<posy>30</posy>
+		<width>450</width>
+		<height>14</height>
+		<label>$INFO[ListItem.TVShowTitle]</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>						<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(seasons)</visible>		
+		</control>
+
+	<control type="label">
+		<posx>540</posx>
+		<posy>45</posy>
+		<width>450</width>
+		<height>14</height>
+		<label>Runtime: [COLOR White]$INFO[ListItem.Duration][COLOR]</label>
+		<textcolor>ff3f80c3</textcolor>
+		<align>right</align>
+		<font>Small</font>					<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(movies)</visible>		
+		</control>
+
+	<control type="label">
+		<posx>540</posx>
+		<posy>45</posy>
+		<width>450</width>
+		<height>14</height>
+		<label>Unwatched Episodes: [COLOR White] $INFO[ListItem.Property(UnWatchedEpisodes)]/$INFO[ListItem(0).Episode][COLOR]</label>
+		<textcolor>ff3f80c3</textcolor>
+		<align>right</align>
+		<font>Small</font>					<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(movies)</visible>		
+		</control>
+
+		</control>
+
+
+	</control>
+
+
+	<!-- Poster Top -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="80" condition="true" center="960,360">conditional</animation>
+
+	<posx>215</posx>
+
+	<visible>Control.IsVisible(52)</visible>
+
+	<control type="image">
+		<posx>500</posx>
+		<posy>560</posy>
+		<width>400</width>
+		<height>550</height>
+		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(2).Icon]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>500</posx>
+		<posy>120</posy>
+		<width>400</width>
+		<height>550</height>
+		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(2).Icon]</texture>
+		</control>
+
+	</control>
+
+	<!-- Poster Middle -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="90" condition="true" center="960,360">conditional</animation>
+
+	<posx>115</posx>
+
+	<visible>Control.IsVisible(52)</visible>
+
+	<control type="image">
+		<posx>500</posx>
+		<posy>560</posy>
+		<width>400</width>
+		<height>550</height>
+		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(1).Icon]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>500</posx>
+		<posy>120</posy>
+		<width>400</width>
+		<height>550</height>
+		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(1).Icon]</texture>
+		</control>
+
+	</control>
+
+	<!-- Poster Top -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="100" condition="true" center="960,360">conditional</animation>
+
+	<posx>15</posx>
+
+	<visible>Control.IsVisible(52)</visible>
+
+	<control type="image">
+		<posx>500</posx>
+		<posy>572</posy>
+		<width>400</width>
+		<height>550</height>
+		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(0).Icon]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>500</posx>
+		<posy>120</posy>
+		<width>400</width>
+		<height>550</height>
+		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(0).Icon]</texture>
+		</control>
+
+	</control>
+
+	</include>
+  
+</includes>

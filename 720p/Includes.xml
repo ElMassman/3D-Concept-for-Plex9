@@ -1,0 +1,80 @@
+<includes>
+  
+<include file="Defaults.xml" />
+<include file="CommonViews.xml" />
+<include file="Viewtype_Fanart.xml" />
+<include file="Viewtype_Poster.xml" />
+
+<!-- Default Time Based Backgrounds -->
+
+	<include name="time_backgrounds">
+
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/morning.jpg</texture>
+			<visible>system.time(05:00,12:00)</visible>
+		</control>
+
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/afternoon.jpg</texture>
+			<visible>system.time(12:00,17:00)</visible>
+		</control>
+
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/evening.jpg</texture>
+			<visible>system.time(17:00,21:00)</visible>
+		</control>
+
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/night.jpg</texture>
+			<visible>system.time(21:00,05:00)</visible>
+		</control>
+
+	</include>
+
+	<!-- Floor -->
+
+	<include name="floor">
+		<control type="image">
+		<posy>570</posy>
+		<width>1280</width>
+		<height>150</height>
+		<texture>floor.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+
+	</include>
+
+<include name="DialogBack">
+	<control type="image">
+		<width>520</width>
+		<height>424</height>
+		<texture>White.png</texture>
+    <aspectratio>stretch</aspectratio>
+	</control>
+</include>
+
+<include name="DialogID">
+	<posx>10</posx>
+	<posy>10</posy>
+	<font>Small</font>
+	<textcolor>Red</textcolor>
+	<align>left</align>
+</include>
+
+<include name="WindowID">
+	<posx>10</posx>
+	<posy>10</posy>
+	<font>Small</font>
+	<textcolor>Red</textcolor>
+	<align>left</align>
+</include>
+  
+</includes>
