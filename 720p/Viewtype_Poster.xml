@@ -103,6 +103,14 @@
 
 		</control>
 
+	<control type="image">
+		<posx>540</posx>
+		<posy>45</posy>
+		<width>50</width>
+		<height>30</height>
+		<info>ListItem.Property(mediaTag::videoResolution)</info>
+	</control>
+
 
 	</control>
 
@@ -119,20 +127,30 @@
 	<visible>Control.IsVisible(52)</visible>
 
 	<control type="image">
-		<posx>500</posx>
-		<posy>560</posy>
-		<width>400</width>
-		<height>550</height>
-		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(2).Icon]</texture>
-		<colordiffuse>69ffffff</colordiffuse>
-		</control>
-
-	<control type="image">
-		<posx>500</posx>
+		<posx>510</posx>
 		<posy>120</posy>
 		<width>400</width>
 		<height>550</height>
+		<texture>postershadow.png</texture>
+		</control>
+
+	<control type="image">
+		<posx>555</posx>
+		<posy>616</posy>
+		<width>310</width>
+		<height>460</height>
+		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(2).Icon]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
+	<control type="image">
+		<posx>555</posx>
+		<posy>165</posy>
+		<width>310</width>
+		<height>460</height>
 		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(2).Icon]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 	</control>
@@ -149,20 +167,30 @@
 	<visible>Control.IsVisible(52)</visible>
 
 	<control type="image">
-		<posx>500</posx>
-		<posy>560</posy>
-		<width>400</width>
-		<height>550</height>
-		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(1).Icon]</texture>
-		<colordiffuse>69ffffff</colordiffuse>
-		</control>
-
-	<control type="image">
-		<posx>500</posx>
+		<posx>510</posx>
 		<posy>120</posy>
 		<width>400</width>
 		<height>550</height>
+		<texture>postershadow.png</texture>
+		</control>
+
+	<control type="image">
+		<posx>555</posx>
+		<posy>616</posy>
+		<width>310</width>
+		<height>460</height>
+		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(1).Icon]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
+	<control type="image">
+		<posx>555</posx>
+		<posy>165</posy>
+		<width>310</width>
+		<height>460</height>
 		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(1).Icon]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 	</control>
@@ -179,20 +207,30 @@
 	<visible>Control.IsVisible(52)</visible>
 
 	<control type="image">
-		<posx>500</posx>
-		<posy>572</posy>
-		<width>400</width>
-		<height>550</height>
-		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(0).Icon]</texture>
-		<colordiffuse>69ffffff</colordiffuse>
-		</control>
-
-	<control type="image">
-		<posx>500</posx>
+		<posx>510</posx>
 		<posy>120</posy>
 		<width>400</width>
 		<height>550</height>
+		<texture>postershadow.png</texture>
+		</control>
+
+	<control type="image">
+		<posx>555</posx>
+		<posy>616</posy>
+		<width>310</width>
+		<height>460</height>
+		<texture diffuse="posteroverlay.png" flipy="true">$INFO[Listitem(0).Icon]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
+	<control type="image">
+		<posx>556</posx>
+		<posy>165</posy>
+		<width>310</width>
+		<height>460</height>
 		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(0).Icon]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 	</control>
