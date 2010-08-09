@@ -13,6 +13,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/morning.jpg</texture>
+			<aspectratio>stretch</aspectratio>
 			<visible>system.time(05:00,12:00)</visible>
 		</control>
 
@@ -20,6 +21,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/afternoon.jpg</texture>
+			<aspectratio>stretch</aspectratio>
 			<visible>system.time(12:00,17:00)</visible>
 		</control>
 
@@ -27,6 +29,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/evening.jpg</texture>
+			<aspectratio>stretch</aspectratio>
 			<visible>system.time(17:00,21:00)</visible>
 		</control>
 
@@ -34,6 +37,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/night.jpg</texture>
+			<aspectratio>stretch</aspectratio>
 			<visible>system.time(21:00,05:00)</visible>
 		</control>
 

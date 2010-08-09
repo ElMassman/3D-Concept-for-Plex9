@@ -101,14 +101,14 @@
 		<visible>!Container.Content(movies)</visible>		
 		</control>
 
-		</control>
-
 	<control type="image">
-		<posx>540</posx>
-		<posy>45</posy>
+		<posx>350</posx>
+		<posy>32</posy>
 		<width>50</width>
 		<height>30</height>
 		<info>ListItem.Property(mediaTag::videoResolution)</info>
+	</control>
+
 	</control>
 
 
@@ -132,6 +132,7 @@
 		<width>400</width>
 		<height>550</height>
 		<texture>postershadow.png</texture>
+		<aspectratio>stretch</aspectratio>
 		</control>
 
 	<control type="image">
@@ -172,6 +173,7 @@
 		<width>400</width>
 		<height>550</height>
 		<texture>postershadow.png</texture>
+		<aspectratio>stretch</aspectratio>
 		</control>
 
 	<control type="image">
@@ -212,6 +214,7 @@
 		<width>400</width>
 		<height>550</height>
 		<texture>postershadow.png</texture>
+		<aspectratio>stretch</aspectratio>
 		</control>
 
 	<control type="image">

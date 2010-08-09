@@ -64,6 +64,7 @@
 		<width>900</width>
 		<height>550</height>
 		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
 		</control>
 
 	<control type="largeimage">
@@ -85,6 +86,23 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
+
+	<control type="image">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+	</control>
 
 	<control type="label">
 		<posx>870</posx>
@@ -260,6 +278,7 @@
 		<width>900</width>
 		<height>550</height>
 		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
 		</control>
 
 	<control type="largeimage">
@@ -281,6 +300,23 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
+
+	<control type="image">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+	</control>
 
 	<control type="label">
 		<posx>870</posx>
@@ -456,6 +492,7 @@
 		<width>900</width>
 		<height>550</height>
 		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
 		</control>
 
 	<control type="largeimage">
@@ -477,6 +514,23 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
+	
+	<control type="image">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+	</control>
 
 	<control type="label">
 		<posx>870</posx>
@@ -519,7 +573,7 @@
 		</control>
 
 	<control type="image">
-		<posx>76</posx>
+		<posx>126</posx>
 		<posy>526</posy>
 		<width>107</width>
 		<height>73</height>
@@ -528,11 +582,47 @@
 		</control>
 
 	<control type="image">
-		<posx>75</posx>
+		<posx>125</posx>
 		<posy>525</posy>
 		<width>107</width>
 		<height>73</height>
 		<texture>$INFO[ListItem.Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::audioChannels)]</texture>
 		<colordiffuse>White</colordiffuse>
 		</control>
 
