@@ -431,6 +431,20 @@
 		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4002">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(2).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnNext</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
+		</control>
+
+
 	</control>
 
 	<!-- Back Panel Moving Forward -->
@@ -837,6 +851,20 @@
 		<animation effect="zoom" start="80" end="90" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4002">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnNext</visible>	
+		<animation effect="zoom" start="80" end="90" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
+		</control>
+
+
 	</control>
 
 	<!-- Middle Panel Moving Forward -->
@@ -1243,6 +1271,20 @@
 		<animation effect="zoom" start="90" end="100" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
 
 		</control>
+
+		<control type="image" id="4002">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(0).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnNext</visible>	
+		<animation effect="zoom" start="90" end="100" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
+		</control>
+
+
 	</control>
 
 	<!-- Front Panel Drop Off -->
@@ -1650,6 +1692,19 @@
 		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4002">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(-1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnNext</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+		</control>
+
 	</control>
 
 	<!-- On Previous -->
@@ -2060,6 +2115,19 @@
 		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4001">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(3).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+		</control>
+
 	</control>
 
 	<!-- Panel Middle Moving Back -->
@@ -2465,6 +2533,19 @@
 		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4001">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(2).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+		</control>
+
 	</control>
 
 	<!-- Panel Top Moving Back -->
@@ -2870,6 +2951,19 @@
 		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4001">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+		</control>
+
 	</control>
 	
 	<!-- Panel New Drop In -->
@@ -3277,6 +3371,19 @@
 		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
 
 		</control>
+
+	<control type="image" id="4001">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(0).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+		</control>
+
 	</control>
 
 	</control>
@@ -3286,6 +3393,12 @@
 
 	<control type="group" id="4000">
 		<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)]</visible>
+
+	
+
+	<!-- Animation To Rotate Whole View When Menu Is Activated -->
+
+	<!--animation effect="rotatey" start="0" end="-5" center="360,360" time="3000" condition="true">conditional</animation-->
 	
 	<!-- Panel Bottom -->
 
@@ -3610,6 +3723,16 @@
 		<shadowcolor>99000000</shadowcolor>
 		<visible>IsEmpty(Listitem.Duration)</visible>
 		<visible>Container.Content(episodes)</visible>
+		</control>
+
+	<control type="image">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(2).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 
 	</control>
@@ -3939,6 +4062,16 @@
 		<visible>Container.Content(episodes)</visible>
 		</control>
 
+	<control type="image">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
 	</control>
 
 	<!-- Panel Top -->
@@ -4265,6 +4398,17 @@
 		<visible>IsEmpty(Listitem.Duration)</visible>
 		<visible>Container.Content(episodes)</visible>
 		</control>
+
+	<control type="image">
+		<posx>786</posx>
+		<posy>183</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(0).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>	
+
 	</control>
 
 	</control>

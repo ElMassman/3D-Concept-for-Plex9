@@ -4,10 +4,10 @@
 
 <controls>
 
-  <control type="label">
+  <!--control type="label">
     <include>WindowID</include>
     <label>MyVideo.xml</label>
-  </control>
+  </control-->
 
 	<!--include>time_backgrounds</include-->
 
@@ -41,6 +41,7 @@
 			<description>View</description>
       <width>150</width>
       <textcolor>White</textcolor>
+	<onclick>Container.NextViewMode</onclick>
       <texturefocus border="1">ButtonFo.png</texturefocus>
       <texturenofocus border="1">ButtonNF.png</texturenofocus>
 		</control>

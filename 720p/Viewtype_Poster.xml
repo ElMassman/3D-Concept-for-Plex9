@@ -163,6 +163,21 @@
 		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
 		<visible>Container.OnNext</visible>				</control>
 
+	<control type="image" id="4002">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(2).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">Conditional</animation>
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+		<visible>Container.OnNext</visible>
+		
+		</control>
+
 	</control>
 
 	<!-- Poster Bottom Moving Forward -->
@@ -206,6 +221,20 @@
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="80" end="90" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
 		<visible>Container.OnNext</visible>				</control>
+
+	<control type="image" id="4002">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="zoom" start="80" end="90" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
+		<visible>Container.OnNext</visible>
+		
+		</control>
 
 	</control>
 
@@ -251,6 +280,20 @@
 	<animation effect="zoom" start="90" end="100" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
 		<visible>Container.OnNext</visible>				</control>
 
+	<control type="image" id="4002">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(0).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="zoom" start="90" end="100" time="400" easing="in" condition="true" center="1800,360">Hidden</animation>
+		<visible>Container.OnNext</visible>
+		
+		</control>
+
 	</control>
 
 	<!-- Poster Top Drop Off -->
@@ -295,6 +338,20 @@
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
 		<visible>Container.OnNext</visible>				</control>
+
+	<control type="image" id="4002">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(-1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+		<visible>Container.OnNext</visible>
+		
+		</control>
 
 	</control>
 
@@ -349,6 +406,21 @@
 	<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
 		<visible>Container.OnPrevious</visible>				</control>
 
+	<control type="image" id="4001">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(3).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+		<visible>Container.OnPrevious</visible>
+		
+		</control>
+
 	</control>
 
 	<!-- Poster Middle Moving Back -->
@@ -392,6 +464,20 @@
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="90" end="80" time="400" easing="out" condition="true" center="1800,360">Hidden</animation>
 		<visible>Container.OnPrevious</visible>				</control>
+
+	<control type="image" id="4001">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(2).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" condition="true" center="1800,360">Hidden</animation>
+		<visible>Container.OnPrevious</visible>
+		
+		</control>
 
 	</control>
 
@@ -444,6 +530,22 @@
 		</animation>
 		<visible>Container.OnPrevious</visible>				</control>
 
+	<control type="image" id="4001">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(1).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation type="Hidden">
+		<effect type="zoom" start="100" end="90" time="400" easing="out" center="1800,360" />
+		</animation>
+		<visible>Container.OnPrevious</visible>	
+		</control>
+
+
 	</control>
 
 	<!-- Poster New Drop In -->
@@ -491,6 +593,20 @@
 		<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
 		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
 		<visible>Container.OnPrevious</visible>				</control>
+
+	<control type="image" id="4001">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem(0).Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+		<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+		<visible>Container.OnPrevious</visible>	
+		</control>
 
 	</control>
 
@@ -544,6 +660,18 @@
 	<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">conditional</animation>
 		</control>
 
+	<control type="image">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem.Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">conditional</animation>
+		</control>
+
 	</control>
 
 	<!-- Poster Middle -->
@@ -590,6 +718,18 @@
 
 		</control>
 
+	<control type="image">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem.Overlay]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="90" condition="true" center="1800,360">conditional</animation>
+		</control>
+
 	</control>
 
 	<!-- Poster Top -->
@@ -629,6 +769,18 @@
 		<width>310</width>
 		<height>460</height>
 		<texture diffuse="posteroverlay.png" align="top">$INFO[Listitem(0).Icon]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
+		</control>
+		
+	<control type="image">
+		<posx>746</posx>
+		<posy>184</posy>
+		<aspectratio>stretch</aspectratio>
+		<width>100</width>
+		<height>100</height>
+		<texture>$INFO[ListItem.Overlay]</texture>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
