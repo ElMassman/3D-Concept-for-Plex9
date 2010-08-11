@@ -24,6 +24,10 @@
       </focusedlayout>
 		</control>
 
+	<control type="group">
+
+	<include>menu_animation</include>
+
 	<!-- Middle Bar --> 
 
 	<control type="group">
@@ -624,6 +628,8 @@
 
 	<posx>15</posx>
 
+	<include>rotate_animation</include>
+
 	<visible>Control.IsVisible(52)</visible>
 
 	<control type="image">
@@ -679,6 +685,8 @@
 	<control type="group">
 
 	<posx>15</posx>
+
+	<include>rotate_animation</include>
 
 	<visible>Control.IsVisible(52)</visible>
 
@@ -738,6 +746,8 @@
 
 	<posx>15</posx>
 
+	<include>rotate_animation</include>
+
 	<visible>Control.IsVisible(52)</visible>
 
 	<control type="image">
@@ -785,6 +795,8 @@
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
 		</control>
+
+	</control>
 
 	</control>
 

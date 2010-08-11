@@ -26,6 +26,10 @@
 
 	<!-- On Next -->
 
+	<control type="group">
+		
+	<include>menu_animation</include>
+
 	<!-- Back Panel New Drop In -->
 
 	<control type="group">
@@ -3407,6 +3411,8 @@
 	<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">conditional</animation>
 
+	<include>rotate_animation</include>
+
 	<posx>15</posx>
 
 	<visible>Control.IsVisible(51)</visible>
@@ -3743,6 +3749,8 @@
 
 	<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="90" condition="true" center="1800,360">conditional</animation>
+
+	<include>rotate_animation</include>
 
 	<posx>15</posx>
 
@@ -4081,6 +4089,8 @@
 	<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
 
+	<include>rotate_animation</include>
+
 	<posx>15</posx>
 
 	<visible>Control.IsVisible(51)</visible>
@@ -4408,6 +4418,8 @@
 		<texture>$INFO[ListItem(0).Overlay]</texture>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>	
+
+	</control>
 
 	</control>
 

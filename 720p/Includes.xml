@@ -4,6 +4,7 @@
 <include file="CommonViews.xml" />
 <include file="Viewtype_Fanart.xml" />
 <include file="Viewtype_Poster.xml" />
+<include file="Viewtype_Banner.xml" />
 
 <!-- Default Time Based Backgrounds -->
 
@@ -52,7 +53,21 @@
 		<height>150</height>
 		<texture>floor.png</texture>
 		<aspectratio>stretch</aspectratio>
+		<include>menu_animation</include>
 	</control>
+
+	</include>
+
+	<!-- Menu Animations -->
+
+	<include name="menu_animation">
+	<animation effect="slide" end="200,0" time="500" condition="Control.HasFocus(2) | Control.HasFocus(99)">Conditional</animation>
+
+	</include>
+
+	<include name="rotate_animation">
+	<animation effect="rotatey" end="6" time="500" center="1800,360" condition="Control.HasFocus(2) | Control.HasFocus(99)">Conditional</animation>
+	<animation effect="slide" end="40,0" time="500" condition="Control.HasFocus(2) | Control.HasFocus(99)">Conditional</animation>
 
 	</include>
 

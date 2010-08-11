@@ -1,0 +1,55 @@
+<includes>
+  
+	<include name="banner">
+    <description>Banner View</description>
+		<control type="list" id="53">
+			<posx>170</posx>
+			<posy>40</posy>
+			<width>1010</width>
+			<height>480</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<viewtype label="banner">banner</viewtype>
+			<scrolltime>200</scrolltime>
+			<visible>Container.Content(tvshows)</visible>
+      <itemlayout height="32">
+        <control type="image">
+          <width>500</width>
+          <height>30</height>
+          <texture>ButtonNF.png</texture>
+        </control>
+        <control type="image">
+          <posy>2</posy>
+          <width>26</width>
+          <height>26</height>
+          <info>ListItem.Icon</info>
+        </control>
+        <control type="label">
+          <posx>30</posx>
+          <width>465</width>
+          <height>30</height>
+          <info>ListItem.Label</info>
+          <textcolor>White</textcolor>
+          <scroll>false</scroll>
+        </control>
+      </itemlayout>
+      <focusedlayout height="140">
+	<control type="image">
+		<width>779</width>
+		<height>299</height>
+		<texture>bannersurround.png</texture>
+	</control>
+      	<control type="image">
+		<posx>10</posx>
+		<posy>10</posy>
+		<width>760</width>
+		<height>140</height>
+		<texture diffuse="bannerdiffuse.png">$INFO[Listitem.Banner]</texture>
+	</control>
+      </focusedlayout>
+		</control>
+	</include>
+  
+</includes>

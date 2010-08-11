@@ -16,6 +16,7 @@
 		<height>720</height>
 		<texture>$INFO[Listitem(0).Property(Fanart_Image)]</texture>
 		<aspectratio>stretch</aspectratio>
+		<include>menu_animation</include>
 	</control>
 
 	<include>floor</include>
@@ -23,10 +24,11 @@
 
 	<include>fanart</include>
 	<include>poster</include>
+	<include>banner</include>
 	<include>list</include>
   
 	<control type="grouplist" id="9000">
-		<animation effect="slide" start="0" end="200" time="200">Focus</animation>
+		<include>menu_animation</include>
 		<posx>-190</posx>
 		<posy>40</posy>
 		<width>150</width>
