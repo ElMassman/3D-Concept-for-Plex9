@@ -24,6 +24,1635 @@
       </focusedlayout>
 		</control>
 
+	<!-- On Previous -->
+
+	<control type="group">
+
+	<!-- Panel Back Dropping Off -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+
+	<posx>15</posx>
+
+	<visible>Control.IsVisible(51)</visible>
+	<animation effect="zoom" start="100" end="80" center="1800,360" condition="true">Conditional</animation>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(3).Property(Fanart_Image)]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>	
+	
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(3).Thumb]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+		</control>
+
+	<control type="image" id="4001">
+		<posx>50</posx>
+		<posy>120</posy>
+		<width>900</width>
+		<height>550</height>
+		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(3).Property(Fanart_Image)]</texture>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(3).Thumb]</texture>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+	
+	<control type="image" id="4001">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem(3).StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="image" id="4001">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem(3).StarRating</info>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="label" id="4001">
+		<posx>870</posx>
+		<posy>405</posy>
+		<width>790</width>
+		<height>24</height>	
+		<info>ListItem(3).Label</info>
+		<align>right</align>
+		<font>Medium</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<info>ListItem(3).Genre</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		<visible>!IsEmpty(Listitem(3).Genre)</visible>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(3).TVShowTitle] - Season $INFO[ListItem(3).Season] - Episode $INFO[ListItem(3).Episode]</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>126</posx>
+		<posy>526</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(3).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>125</posx>
+		<posy>525</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(3).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(3).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(3).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(3).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(3).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="textbox" id="4001">
+		<posx>180</posx>
+		<posy>450</posy>
+		<width>690</width>
+		<height>80</height>	
+		<info>ListItem(3).Plot</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Plot)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Director:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(3).Director</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Writer:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<info>ListItem(3).Writer</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Unwatched Episodes:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(3).Property(UnWatchedEpisodes)]/$INFO[ListItem(3).Episode]</label>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Runtime:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(2).Duration</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(3).Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Aired:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem(3).Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(3).Date</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem(3).Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,0" end="0,500" time="400" easing="out" condition="true">Hidden</animation>
+
+		</control>
+	</control>
+
+	<!-- Panel Middle Moving Back -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+
+	<posx>15</posx>
+
+	<visible>Control.IsVisible(51)</visible>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(2).Property(Fanart_Image)]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(2).Thumb]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+		</control>
+
+	<control type="image" id="4001">
+		<posx>50</posx>
+		<posy>120</posy>
+		<width>900</width>
+		<height>550</height>
+		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(2).Property(Fanart_Image)]</texture>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(2).Thumb]</texture>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+	
+	<control type="image" id="4001">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem(2).StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="image" id="4001">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem(2).StarRating</info>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="label" id="4001">
+		<posx>870</posx>
+		<posy>405</posy>
+		<width>790</width>
+		<height>24</height>	
+		<info>ListItem(2).Label</info>
+		<align>right</align>
+		<font>Medium</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<info>ListItem(2).Genre</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		<visible>!IsEmpty(Listitem(2).Genre)</visible>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(2).TVShowTitle] - Season $INFO[ListItem(2).Season] - Episode $INFO[ListItem(2).Episode]</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>126</posx>
+		<posy>526</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>125</posx>
+		<posy>525</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="textbox" id="4001">
+		<posx>180</posx>
+		<posy>450</posy>
+		<width>690</width>
+		<height>80</height>	
+		<info>ListItem(2).Plot</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Plot)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Director:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(2).Director</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Writer:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<info>ListItem(2).Writer</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Unwatched Episodes:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(2).Property(UnWatchedEpisodes)]/$INFO[ListItem(2).Episode]</label>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Runtime:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(2).Duration</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(2).Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Aired:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem(2).Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(2).Date</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem(2).Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="90" end="80" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+	</control>
+
+	<!-- Panel Top Moving Back -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+
+	<posx>15</posx>
+
+	<visible>Control.IsVisible(51)</visible>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(1).Property(Fanart_Image)]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(1).Thumb]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+		</control>
+
+	<control type="image" id="4001">
+		<posx>50</posx>
+		<posy>120</posy>
+		<width>900</width>
+		<height>550</height>
+		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(1).Property(Fanart_Image)]</texture>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(1).Thumb]</texture>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+	
+	<control type="image" id="4001">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem(1).StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="image" id="4001">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem(1).StarRating</info>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="label" id="4001">
+		<posx>870</posx>
+		<posy>405</posy>
+		<width>790</width>
+		<height>24</height>	
+		<info>ListItem(1).Label</info>
+		<align>right</align>
+		<font>Medium</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<info>ListItem(1).Genre</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		<visible>!IsEmpty(Listitem(1).Genre)</visible>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(1).TVShowTitle] - Season $INFO[ListItem(1).Season] - Episode $INFO[ListItem(1).Episode]</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>126</posx>
+		<posy>526</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>125</posx>
+		<posy>525</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="textbox" id="4001">
+		<posx>180</posx>
+		<posy>450</posy>
+		<width>690</width>
+		<height>80</height>	
+		<info>ListItem(1).Plot</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Plot)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Director:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(1).Director</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Writer:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<info>ListItem(1).Writer</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Unwatched Episodes:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(1).Property(UnWatchedEpisodes)]/$INFO[ListItem(1).Episode]</label>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Runtime:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(1).Duration</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem(1).Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Aired:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem(1).Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(1).Date</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem(1).Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="zoom" start="100" end="90" time="400" easing="out" center="1800,360" condition="true">Hidden</animation>
+
+		</control>
+	</control>
+	
+	<!-- Panel New Drop In -->
+
+	<control type="group">
+
+	<animation effect="rotatey" end="10" condition="true">conditional</animation>
+	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
+
+	<posx>15</posx>
+
+	<visible>Control.IsVisible(51)</visible>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(0).Property(Fanart_Image)]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="slide" start="0,500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>620</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" flipy="true">$INFO[Listitem(0).Thumb]</texture>
+		<colordiffuse>69ffffff</colordiffuse>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>50</posx>
+		<posy>120</posy>
+		<width>900</width>
+		<height>550</height>
+		<texture>overlayshadow.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(0).Property(Fanart_Image)]</texture>
+		<visible>!Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="largeimage" id="4001">
+		<posx>95</posx>
+		<posy>165</posy>
+		<width>810</width>
+		<height>460</height>
+		<texture diffuse="overlay.png" align="top">$INFO[Listitem(0).Thumb]</texture>
+		<visible>Container.Content(episodes)</visible>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+	
+	<control type="image" id="4001">
+		<posx>773</posx>
+		<posy>381</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="image" id="4001">
+		<posx>772</posx>
+		<posy>380</posy>
+		<width>100</width>
+		<height>21</height>
+		<info>ListItem.StarRating</info>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+	</control>
+
+	<control type="label" id="4001">
+		<posx>870</posx>
+		<posy>405</posy>
+		<width>790</width>
+		<height>24</height>	
+		<info>ListItem(0).Label</info>
+		<align>right</align>
+		<font>Medium</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<info>ListItem(0).Genre</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		<visible>!IsEmpty(Listitem.Genre)</visible>
+		<visible>Container.OnPrevious</visible>
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+	
+		</control>
+
+	<control type="label" id="4001">
+		<posx>868</posx>
+		<posy>430</posy>
+		<width>790</width>
+		<height>14</height>	
+		<label>$INFO[ListItem(0).TVShowTitle] - Season $INFO[ListItem(0).Season] - Episode $INFO[ListItem(0).Episode]</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>126</posx>
+		<posy>526</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem.Property(mediaTag::Studio)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>125</posx>
+		<posy>525</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem.Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="image" id="4001">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem.Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>White</colordiffuse>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="textbox" id="4001">
+		<posx>180</posx>
+		<posy>450</posy>
+		<width>690</width>
+		<height>80</height>	
+		<info>ListItem(0).Plot</info>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Plot)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Director:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>535</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(0).Director</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Director)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Writer:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<info>ListItem(0).Writer</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Writer)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Unwatched Episodes:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<label>$INFO[ListItem.Property(UnWatchedEpisodes)]/$INFO[ListItem(0).Episode]</label>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Runtime:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(0).Duration</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Aired:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+
+	<control type="label" id="4001">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(0).Date</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		<visible>Container.OnPrevious</visible>	
+		<animation effect="slide" start="0,-500" end="0,0" time="400" easing="in" condition="true">Hidden</animation>
+
+		</control>
+	</control>
+
+	</control>
+
 
 	<!-- Static Panels -->
 
