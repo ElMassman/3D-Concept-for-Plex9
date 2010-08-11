@@ -11,11 +11,25 @@
 
 	<!--include>time_backgrounds</include-->
 
-	<control type="largeimage">
+	<!--control type="largeimage">
 		<width>1280</width>
 		<height>720</height>
 		<texture>$INFO[Listitem(0).Property(Fanart_Image)]</texture>
 		<aspectratio>stretch</aspectratio>
+		<visible>!Control.IsVisible(50)</visible>
+		<include>menu_animation</include>
+	</control-->
+
+	<control type="multiimage">
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<loop>yes</loop>
+		<aspectratio>stretch</aspectratio>
+		<visible>!Control.IsVisible(50)</visible>
 		<include>menu_animation</include>
 	</control>
 
@@ -26,10 +40,19 @@
 	<include>poster</include>
 	<include>banner</include>
 	<include>list</include>
+
+	<control type="image">
+		<posx>-201</posx>
+		<width>200</width>
+		<height>720</height>
+		<texture>menuback.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<include>menu_animation</include>
+	</control>
   
 	<control type="grouplist" id="9000">
 		<include>menu_animation</include>
-		<posx>-190</posx>
+		<posx>-175</posx>
 		<posy>40</posy>
 		<width>150</width>
     <height>480</height>

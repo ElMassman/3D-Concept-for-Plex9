@@ -13,6 +13,7 @@
 			<ondown>50</ondown>
 			<viewtype label="list">list</viewtype>
 			<scrolltime>200</scrolltime>
+			<include>menu_animation</include>
       <itemlayout height="32">
         <control type="image">
           <width>500</width>
