@@ -672,7 +672,7 @@
 		<aspectratio>stretch</aspectratio>
 		<width>100</width>
 		<height>100</height>
-		<texture>$INFO[ListItem.Overlay]</texture>
+		<texture>$INFO[ListItem(2).Overlay]</texture>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">conditional</animation>
@@ -732,7 +732,7 @@
 		<aspectratio>stretch</aspectratio>
 		<width>100</width>
 		<height>100</height>
-		<texture>$INFO[ListItem.Overlay]</texture>
+		<texture>$INFO[ListItem(1).Overlay]</texture>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="90" condition="true" center="1800,360">conditional</animation>
@@ -790,7 +790,7 @@
 		<aspectratio>stretch</aspectratio>
 		<width>100</width>
 		<height>100</height>
-		<texture>$INFO[ListItem.Overlay]</texture>
+		<texture>$INFO[ListItem(0).Overlay]</texture>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<animation effect="rotatey" end="10" condition="true">conditional</animation>
 	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
