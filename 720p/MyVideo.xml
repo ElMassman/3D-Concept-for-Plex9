@@ -9,9 +9,16 @@
     <label>MyVideo.xml</label>
   </control>
 
-	<include>time_backgrounds</include>
-	<!--include>floor</include-->
+	<!--include>time_backgrounds</include-->
 
+	<control type="largeimage">
+		<width>1280</width>
+		<height>720</height>
+		<texture>$INFO[Listitem(0).Property(Fanart_Image)]</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+
+	<include>floor</include>
 	
 
 	<include>fanart</include>
