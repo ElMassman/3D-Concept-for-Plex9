@@ -24,17 +24,22 @@
       </focusedlayout>
 		</control>
 
+
+	<!-- Static Panels -->
+
+	<control type="group" id="4000">
+		<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)]</visible>
 	
 	<!-- Panel Bottom -->
 
 	<control type="group">
 
 	<animation effect="rotatey" end="10" condition="true">conditional</animation>
-	<animation effect="zoom" start="100" end="80" condition="true" center="960,360">conditional</animation>
+	<animation effect="zoom" start="100" end="80" condition="true" center="1800,360">conditional</animation>
 
-	<posx>215</posx>
+	<posx>15</posx>
 
-	<visible>Control.IsVisible(51)</visible>	
+	<visible>Control.IsVisible(51)</visible>
 
 	<control type="largeimage">
 		<posx>95</posx>
@@ -57,7 +62,7 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-	
+
 	<control type="image">
 		<posx>50</posx>
 		<posy>120</posy>
@@ -86,13 +91,13 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-
+	
 	<control type="image">
 		<posx>773</posx>
 		<posy>381</posy>
 		<width>100</width>
 		<height>21</height>
-		<info>ListItem.StarRating</info>
+		<info>ListItem(2).StarRating</info>
 		<colordiffuse>99000000</colordiffuse>
 	</control>
 
@@ -101,7 +106,7 @@
 		<posy>380</posy>
 		<width>100</width>
 		<height>21</height>
-		<info>ListItem.StarRating</info>
+		<info>ListItem(2).StarRating</info>
 	</control>
 
 	<control type="label">
@@ -114,6 +119,7 @@
 		<font>Medium</font>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
+		
 		</control>
 
 	<control type="label">
@@ -126,8 +132,8 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Genre)</visible>
 		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		<visible>!IsEmpty(Listitem.Genre)</visible>
 		</control>
 
 	<control type="label">
@@ -143,6 +149,60 @@
 		<visible>Container.Content(episodes)</visible>
 		</control>
 
+	<control type="image">
+		<posx>126</posx>
+		<posy>526</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>125</posx>
+		<posy>525</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(2).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
 	<control type="textbox">
 		<posx>180</posx>
 		<posy>450</posy>
@@ -153,7 +213,7 @@
 		<font>Small</font>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Plot)</visible>
+		<visible>!IsEmpty(Listitem.Plot)</visible>
 		</control>
 
 	<control type="label">
@@ -166,7 +226,7 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Director)</visible>
+		<visible>!IsEmpty(Listitem.Director)</visible>
 		</control>
 
 	<control type="label">
@@ -180,7 +240,7 @@
 		<scroll>false</scroll>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Director)</visible>
+		<visible>!IsEmpty(Listitem.Director)</visible>
 		</control>
 
 	<control type="label">
@@ -193,7 +253,7 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Writer)</visible>
+		<visible>!IsEmpty(Listitem.Writer)</visible>
 		</control>
 
 	<control type="label">
@@ -207,7 +267,36 @@
 		<scroll>false</scroll>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Writer)</visible>
+		<visible>!IsEmpty(Listitem.Writer)</visible>
+		</control>
+
+	<control type="label">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Unwatched Episodes:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		</control>
+
+	<control type="label">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<label>$INFO[ListItem.Property(UnWatchedEpisodes)]/$INFO[ListItem(2).Episode]</label>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
 		</control>
 
 	<control type="label">
@@ -220,7 +309,7 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Duration)</visible>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
 		</control>
 
 	<control type="label">
@@ -234,7 +323,36 @@
 		<scroll>false</scroll>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(2).Duration)</visible>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
+		</control>
+
+	<control type="label">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Aired:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		</control>
+
+	<control type="label">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(2).Date</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
 		</control>
 
 	</control>
@@ -244,11 +362,11 @@
 	<control type="group">
 
 	<animation effect="rotatey" end="10" condition="true">conditional</animation>
-	<animation effect="zoom" start="100" end="90" condition="true" center="960,360">conditional</animation>
+	<animation effect="zoom" start="100" end="90" condition="true" center="1800,360">conditional</animation>
 
-	<posx>115</posx>
+	<posx>15</posx>
 
-	<visible>Control.IsVisible(51)</visible>	
+	<visible>Control.IsVisible(51)</visible>
 
 	<control type="largeimage">
 		<posx>95</posx>
@@ -271,7 +389,7 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-		
+
 	<control type="image">
 		<posx>50</posx>
 		<posy>120</posy>
@@ -300,13 +418,13 @@
 		<visible>Container.Content(episodes)</visible>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-
+	
 	<control type="image">
 		<posx>773</posx>
 		<posy>381</posy>
 		<width>100</width>
 		<height>21</height>
-		<info>ListItem.StarRating</info>
+		<info>ListItem(1).StarRating</info>
 		<colordiffuse>99000000</colordiffuse>
 	</control>
 
@@ -315,7 +433,7 @@
 		<posy>380</posy>
 		<width>100</width>
 		<height>21</height>
-		<info>ListItem.StarRating</info>
+		<info>ListItem(1).StarRating</info>
 	</control>
 
 	<control type="label">
@@ -328,6 +446,7 @@
 		<font>Medium</font>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
+		
 		</control>
 
 	<control type="label">
@@ -339,11 +458,11 @@
 		<align>right</align>
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
-		<shadowcolor>99000000</shadowcolor>	
+		<shadowcolor>99000000</shadowcolor>
 		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
-		<visible>!IsEmpty(Listitem(1).Genre)</visible>
+		<visible>!IsEmpty(Listitem.Genre)</visible>
 		</control>
-	
+
 	<control type="label">
 		<posx>868</posx>
 		<posy>430</posy>
@@ -357,6 +476,60 @@
 		<visible>Container.Content(episodes)</visible>
 		</control>
 
+	<control type="image">
+		<posx>126</posx>
+		<posy>526</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>125</posx>
+		<posy>525</posy>
+		<width>107</width>
+		<height>73</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::Studio)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>236</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>235</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::videoResolution)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>331</posx>
+		<posy>537</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>99000000</colordiffuse>
+		</control>
+
+	<control type="image">
+		<posx>330</posx>
+		<posy>536</posy>
+		<width>74</width>
+		<height>51</height>
+		<texture>$INFO[ListItem(1).Property(mediaTag::audioChannels)]</texture>
+		<colordiffuse>White</colordiffuse>
+		</control>
+
 	<control type="textbox">
 		<posx>180</posx>
 		<posy>450</posy>
@@ -367,7 +540,7 @@
 		<font>Small</font>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Plot)</visible>
+		<visible>!IsEmpty(Listitem.Plot)</visible>
 		</control>
 
 	<control type="label">
@@ -380,7 +553,7 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Director)</visible>
+		<visible>!IsEmpty(Listitem.Director)</visible>
 		</control>
 
 	<control type="label">
@@ -394,7 +567,7 @@
 		<scroll>false</scroll>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Director)</visible>
+		<visible>!IsEmpty(Listitem.Director)</visible>
 		</control>
 
 	<control type="label">
@@ -407,7 +580,7 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Writer)</visible>
+		<visible>!IsEmpty(Listitem.Writer)</visible>
 		</control>
 
 	<control type="label">
@@ -421,7 +594,36 @@
 		<scroll>false</scroll>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Writer)</visible>
+		<visible>!IsEmpty(Listitem.Writer)</visible>
+		</control>
+
+	<control type="label">
+		<posx>498</posx>
+		<posy>550</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Unwatched Episodes:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
+		</control>
+
+	<control type="label">
+		<posx>500</posx>
+		<posy>550</posy>
+		<width>350</width>
+		<height>14</height>	
+		<label>$INFO[ListItem.Property(UnWatchedEpisodes)]/$INFO[ListItem(1).Episode]</label>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>!IsEmpty(Listitem.Episode)</visible>
+		<visible>!Container.Content(episodes)</visible>
 		</control>
 
 	<control type="label">
@@ -434,7 +636,7 @@
 		<font>Small</font>
 		<textcolor>ff3f80c3</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Duration)</visible>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
 		</control>
 
 	<control type="label">
@@ -448,7 +650,36 @@
 		<scroll>false</scroll>
 		<textcolor>White</textcolor>
 		<shadowcolor>99000000</shadowcolor>
-		<visible>!IsEmpty(Listitem(1).Duration)</visible>
+		<visible>!IsEmpty(Listitem.Duration)</visible>
+		</control>
+
+	<control type="label">
+		<posx>498</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<label>Aired:</label>
+		<align>right</align>
+		<font>Small</font>
+		<textcolor>ff3f80c3</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
+		</control>
+
+	<control type="label">
+		<posx>500</posx>
+		<posy>565</posy>
+		<width>300</width>
+		<height>14</height>	
+		<info>ListItem(1).Date</info>
+		<align>left</align>
+		<font>Small</font>
+		<scroll>false</scroll>
+		<textcolor>White</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<visible>IsEmpty(Listitem.Duration)</visible>
+		<visible>Container.Content(episodes)</visible>
 		</control>
 
 	</control>
@@ -458,7 +689,7 @@
 	<control type="group">
 
 	<animation effect="rotatey" end="10" condition="true">conditional</animation>
-	<animation effect="zoom" start="100" end="100" condition="true" center="960,360">conditional</animation>
+	<animation effect="zoom" start="100" end="100" condition="true" center="1800,360">conditional</animation>
 
 	<posx>15</posx>
 
@@ -777,6 +1008,8 @@
 		<visible>IsEmpty(Listitem.Duration)</visible>
 		<visible>Container.Content(episodes)</visible>
 		</control>
+	</control>
+
 	</control>
 
 	</include>
